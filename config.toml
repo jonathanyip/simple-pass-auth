@@ -1,0 +1,12 @@
+[Server]
+host="localhost"
+port=8000
+
+[Authentication]
+secret_key="secret"
+shared_key="abcd123"
+hashed_password="a9993e364706816aba3e25717850c26c9cd0d89d"
+
+[Custom]
+page_title="MyAuthPage"
+invalid_password_string="Password is incorrect. Please try again!"
