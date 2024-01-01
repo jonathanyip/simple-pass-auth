@@ -3,10 +3,14 @@ host="localhost"
 port=8000
 
 [Authentication]
-secret_key="secret"
-shared_key="abcd123"
-hashed_password="a9993e364706816aba3e25717850c26c9cd0d89d"
+secret_key="secret" # Secret key used to encrypt the JWT token
+hashed_password="a9993e364706816aba3e25717850c26c9cd0d89d" # SHA-1 Hashed Password
+expiry_time=43200 # Expiry time in minutes
 
 [Custom]
 page_title="MyAuthPage"
+header_text="Password Protected"
+prompt_text="Please put in the shared password to continue"
+submit_button_text="Submit"
 invalid_password_string="Password is incorrect. Please try again!"
+default_redirect_location="/" # Default redirect location if no redirect parameter is provided

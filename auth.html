@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{.PageTitle}} - Login</title>
+        <title>{{.PageTitle}}</title>
         <meta charset="utf-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <style>
@@ -10,7 +10,7 @@
             }
             .login-container {
                 margin: 25px auto;
-                max-width: 400px;
+                max-width: 350px;
                 background-color: #ffffff;
                 padding: 25px;
                 border-radius: 5px;
@@ -19,8 +19,8 @@
     </head>
     <body>
         <div class="login-container">
-            <h2>Password Protected</h2>
-            <p>Please put in the shared password to continue</p>
+            <h2>{{.HeaderText}}</h2>
+            <p>{{.PromptText}}</p>
             {{if .ErrorMessage }}
             <div class="alert alert-danger" role="alert">
                 {{.ErrorMessage}}
@@ -28,7 +28,7 @@
             {{end}}
             <form class="d-grid gap-2" method="post">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" autofocus>
-                <button type="submit" class="btn btn-primary btn-">Submit</button>
+                <button type="submit" class="btn btn-primary btn-">{{.SubmitButtonText}}</button>
             </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
